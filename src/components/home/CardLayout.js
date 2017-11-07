@@ -45,7 +45,7 @@ CardLayout.propTypes = {
     function mapStateToProps(state, ownProps) {
 
         return {
-            tweets: tweets,
+            tweets: state.tweets,
 
         };
     }
