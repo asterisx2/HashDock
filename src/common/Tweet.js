@@ -1,4 +1,5 @@
 var Tweet={
+    tweetId:null,
     text:null,
     dateTime:null,
     user:null,
