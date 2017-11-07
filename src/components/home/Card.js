@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-class TableHeader extends Component{
+class Card extends Component{
     constructor(props, context) {
         super(props, context);
 
