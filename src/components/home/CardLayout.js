@@ -1,6 +1,7 @@
 import React,{PropTypes} from 'react';
 import Card from './Card';
 import * as TweetActions from '../../actions/tweetActions';
+import TweetDetails from './TweetDetail';
 
 
 
@@ -10,19 +11,22 @@ export class CardLayout extends React.Component {
 
         this.state = {
             tweets: Object.assign({}, props.tweets),
+            showTweetDetails:false
         };
 
         this.showTweetDetails = this.showTweetDetails.bind(this);
+        this.toggleShowTweetDetails = this.toggleShowTweetDetails.bind(this);
     }
-    showTweetDetails(tweetId)
+    toggleShowTweetDetails(tweetId)
     {
-
+        this.setState({showTweetDetails:!showTweetDetails});
     }
     render() {
         return (
             <div>
+                {this.state.showTweetDetails?<TweetDetails/>:null}
                 {tweets.map(tweet =>
-                    <Card key={tweet.id} tweet={tweet} onClick={this.showTweetDetails}/>
+                    <Card key={tweet.id} tweet={tweet} onClick={this.toggleShowTweetDetails}/>
                 )}
             </div>
         );

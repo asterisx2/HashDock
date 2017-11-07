@@ -30,7 +30,7 @@ export class twitterHandler {
     export
     function
 
-    registerTweetsCallback(func) {
+    registerTweetsCallback(hashTag,func) {
         (function loop() {
             var rand = Math.round(Math.random() * (3000 - 500)) + 500;
             setTimeout(function () {

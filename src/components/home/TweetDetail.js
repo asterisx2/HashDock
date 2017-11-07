@@ -1,12 +1,16 @@
 import React, {PropTypes} from 'react';
 
-class TableHeader extends Component{
-    showTweetDetails=()=>{
-        this.props.showTweetDetails(this.props.tweet.tweetId);
+class TweetDetail extends React.Component{
+    constructor(props, context) {
+        super(props, context);
+
+        this.state = {
+            tweet: Object.assign({}, props.tweet),
+        };
     }
-    render(){
+    render() {
         return (
-            <div onClick={onClick}>
+            <div>
                 <img src={tweet.avatar} className="tavatar"/>
                 <span className="tuser">{tweet.user}</span>
                 <a target="_blank" className="thandle" href="">@{tweet.handle}</a>
@@ -16,4 +20,7 @@ class TableHeader extends Component{
         );
     }
 }
-export default Card;
+
+TweetDetail.propTypes={
+    tweet:PropTypes.object.isRequired
+}
