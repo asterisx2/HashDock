@@ -9,7 +9,7 @@ export class twitterHandler {
 
     generateNewTweet() {
         var tweet=new Tweet();
-        var tweetLength=Math.random()*(160-100-hashtag.length)+100+hashtag.length;
+        var tweetLength=Math.random()*(160-100-this.hashtag.length)+100+this.hashtag.length;
         var s="";
         var hashTagAdded=false;
         while(s.length<tweetLength)
