@@ -1,6 +1,9 @@
 import React, {PropTypes} from 'react';
 
 class Card extends Component{
+    OnClick = () =>{
+      this.props.onClick(this.props.tweet);
+    };
     constructor(props, context) {
         super(props, context);
 

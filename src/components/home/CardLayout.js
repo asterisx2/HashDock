@@ -11,22 +11,27 @@ export class CardLayout extends React.Component {
 
         this.state = {
             tweets: Object.assign({}, props.tweets),
-            showTweetDetails:false
+            showFullTweet:false,
+            detailedTweet:null
         };
 
         this.showTweetDetails = this.showTweetDetails.bind(this);
         this.toggleShowTweetDetails = this.toggleShowTweetDetails.bind(this);
     }
-    toggleShowTweetDetails(tweetId)
+    showTweetDetails(tweet){
+        this.state({detailedTweet:tweet});
+        this.toggleShowTweetDetails();
+    }
+    toggleShowTweetDetails()
     {
-        this.setState({showTweetDetails:!showTweetDetails});
+        this.setState({showFullTweet:!showFullTweet});
     }
     render() {
         return (
             <div>
-                {this.state.showTweetDetails?<TweetDetails/>:null}
+                {this.state.showFullTweet?<TweetDetails tweet={detailedTweet}/>:null}
                 {tweets.map(tweet =>
-                    <Card key={tweet.id} tweet={tweet} onClick={this.toggleShowTweetDetails}/>
+                    <Card key={tweet.id} tweet={tweet} onClick={this.showTweetDetails}/>
                 )}
             </div>
         );
