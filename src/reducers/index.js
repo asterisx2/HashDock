@@ -3,7 +3,7 @@ import tweets from './tweetReducer';
 
 
 const rootReducer = combineReducers({
-    tweets,
+    tweets
 });
 
 export default rootReducer;
