@@ -1,7 +1,7 @@
 var Tweet={
     text:null,
     dateTime:null,
-    author:null,
+    user:null,
     handle:null,
     avatar:null
 }
