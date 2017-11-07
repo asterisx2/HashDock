@@ -1,10 +1,10 @@
 import Tweet from '../common/Tweet.js';
 
 export class twitterHandler {
-    var hashtag="";
     constructor(Hashtag) {
-        hashTag = Hashtag;
+        this.hashTag = Hashtag;
     }
+
     function
 
     generateNewTweet() {
