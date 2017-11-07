@@ -13,7 +13,7 @@ class Card extends Component{
     }
     render(){
         return (
-            <div onClick={this.props.OnClick}>
+            <div onClick={this.OnClick}>
                 <img src={tweet.avatar} className="tavatar"/>
                 <span className="tuser">{tweet.user}</span>
                 <a target="_blank" className="thandle" href="">@{tweet.handle}</a>
