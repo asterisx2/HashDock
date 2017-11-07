@@ -16,11 +16,11 @@ export class twitterHandler {
         {
             if(Math.random()==1&&!hashTagAdded)
             {
-                s+=hashtag;
+                s.concat(hashtag);
                 hashTagAdded=true;
             }
             else
-            s+=String.fromCharCode(Math.random()*(122-97)+97);
+            s.concat(String.fromCharCode(Math.random()*(122-97)+97));
         }
         tweet.dateTime=new Date().toLocaleDateString();
         tweet.text=s;
