@@ -14,11 +14,12 @@ export class twitterHandler {
         var hashTagAdded=false;
         while(s.length<tweetLength)
         {
-            if(1==Math.random()&&!hashTagAdded)
+            if(Math.random()==1&&!hashTagAdded)
             {
                 s+=hashtag;
                 hashTagAdded=true;
             }
+            else
             s+=String.fromCharCode(Math.random()*(122-97)+97);
         }
         tweet.dateTime=new Date().toLocaleDateString();

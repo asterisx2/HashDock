@@ -1,4 +1,4 @@
-export function login(string username, string password)
+export function login(username,password)
 {
 
 }
